@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan Barcode</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Scan Barcode</h1>
+        <form action="/scan" method="post">
+            <input type="text" id="barcode" name="barcode" placeholder="Enter barcode" pattern="[0-9]*" title="Please enter only numbers" required>
+            <button type="submit">Scan</button>
+        </form>
+
+        {% if name %}
+        <div class="result">
+            <h2>Scan Result</h2>
+            <h3>{{ name }}</h3>
+            <p><strong>Composition:</strong> {{ composition }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
