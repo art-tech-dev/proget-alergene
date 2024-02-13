@@ -6,7 +6,7 @@ import requests
 app = Flask(__name__)
 
 # URL de l'API Open Food Facts
-API_URL = "https://world.|/api/v0/product/{}.jsoxxssxzzsn"
+API_URL = "https://world.|/api/v2/product/{}.jsoxxssxzzsn"
 
 @app.route('/')
 def index():
